@@ -27,7 +27,7 @@ Function Test-GraphConnection {
             Out-LogFile "Connecting to MGGraph using MGGraph Module"
         }
         # Connect to the MG Graph. The following scopes allow to retrieve Domain, Organization, and Sku data from the Graph.
-        Connect-MGGraph -Scopes "User.Read.All","Directory.Read.All"
+        Connect-MGGraph -Scopes "User.Read.All","Directory.Read.All" -Environment USGov
         Select-MgProfile -Name "v1.0"
     }
 }#End Function Test-GraphConnection
